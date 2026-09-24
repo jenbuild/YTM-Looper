@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "YT Music Looper",
+	"version": "1.0.0",
+	"description": "An extension to loop your favorite part of the song from YT Music",
+	"action": {
+		"default_popup": "popup/popup.html"
+	},
+	"icons": {
+		"16": "images/ytm-16x16.png",
+		"32": "images/ytm-32x32.png",
+		"48": "images/ytm-48x48.png",
+		"128": "images/ytm-128x128.png"
+	},
+	"host_permissions": ["https://music.youtube.com/*"],
+	"content_scripts": [
+		{
+			"matches": ["https://music.youtube.com/*"],
+			"js": ["content.js"]
+		}
+	]
+}
