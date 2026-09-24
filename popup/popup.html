@@ -7,8 +7,73 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>YouTube Music Looper</title>
+		<link
+			rel="stylesheet"
+			href="popup.css"
+		/>
 	</head>
 	<body>
-		<h1>YouTube Music Looper</h1>
+		<div
+			class="main-container"
+			style="display: none"
+		>
+			<div class="image-container">
+				<img
+					id="logo"
+					src="../images/ytm-128x128.png"
+					alt="YTM Looper Logo"
+				/>
+			</div>
+
+			<div class="card-container">
+				<div
+					id="status"
+					class="status"
+					style="display: none"
+				>
+					Active
+				</div>
+
+				<div
+					class="slider-container"
+					id="slider"
+				>
+					<div class="slider-track"></div>
+					<div
+						class="slider-range"
+						id="sliderRange"
+					></div>
+					<div
+						class="slider-thumb"
+						id="thumbStart"
+						style="left: 0%"
+					></div>
+					<div
+						class="slider-thumb"
+						id="thumbEnd"
+						style="left: 100%"
+					></div>
+				</div>
+
+				<div class="time-labels">
+					<span id="startTimeLabel">0:00</span>
+					<span id="endTimeLabel">0:00</span>
+				</div>
+			</div>
+
+			<div class="button-group">
+				<button id="startLoop">Loop Segment</button>
+				<button id="stopLoop">Stop Loop</button>
+			</div>
+		</div>
+
+		<div
+			id="loading"
+			class="loading"
+		>
+			Connecting to YouTube Music...
+		</div>
+
+		<script src="popup.js"></script>
 	</body>
 </html>

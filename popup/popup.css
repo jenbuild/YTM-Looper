@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 420px;
+	background-image: linear-gradient(
+		90deg,
+		rgba(251, 44, 54, 1) 0%,
+		rgb(68, 24, 44) 100%
+	);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+#logo {
+	width: 80px;
+	height: 80px;
+}
+
+.main-container {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 24px;
+}
+
+.image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-container {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	/* margin-bottom: 20px; */
+	display: flex;
+	align-items: center;
+}
+
+.slider-track {
+	position: absolute;
+	width: 100%;
+	height: 6px;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 9999px;
+}
+
+.slider-range {
+	position: absolute;
+	height: 6px;
+	background-color: #ec1919;
+	border-radius: 9999px;
+}
+
+.slider-thumb {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #fafafa;
+	border: 2px solid #09090b;
+	border-radius: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	z-index: 2;
+	box-shadow: 0 0 0 1px #27272a;
+	transition: transform 0.1s;
+}
+
+.slider-thumb:hover {
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+.slider-thumb:active {
+	transform: translate(-50%, -50%) scale(0.95);
+}
+
+.time-labels {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-variant-numeric: tabular-nums;
+	color: #a1a1aa;
+}
+
+.card-container {
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	margin: 1rem 0;
+}
+
+.button-group {
+	display: flex;
+	gap: 12px;
+}
+
+button {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+#startLoop {
+	background-color: #fafafa;
+	color: #09090b;
+}
+
+#startLoop:hover {
+	background-color: #e4e4e7;
+}
+
+#stopLoop {
+	background-color: #fafafa;
+	color: #09090b;
+}
+
+#stopLoop:hover {
+	background-color: #e4e4e7;
+}
+
+.status {
+	margin-top: 5px;
+	font-size: 13px;
+	text-align: right;
+	color: #05df73;
+	min-height: 1.2em;
+}
+
+.loading {
+	text-align: center;
+	color: #a1a1aa;
+	font-size: 14px;
+	padding: 5rem;
+}
